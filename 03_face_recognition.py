@@ -29,6 +29,7 @@ id = 0
 # names related to ids: example ==> Marcelo: id=1,  etc
 names = {
     1: 'Ethan',
+    2: 'Avery',
 }
 
 # Initialize and start realtime video capture
