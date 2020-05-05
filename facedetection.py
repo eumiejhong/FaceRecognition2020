@@ -5,7 +5,7 @@ Haar Cascade Face detection with OpenCV
 Adapted by Marcelo Rovai - MJRoBot.org @ 7Feb2018
 '''
 
-import numpy as np
+import cv2
 import cv2
 
 # multiple cascades: https://github.com/Itseez/opencv/tree/master/data/haarcascades
@@ -52,8 +52,7 @@ for (x,y,w,h) in faces:
     roi_gray = gray[y:y+h, x:x+w]
     roi_color = img[y:y+h, x:x+w]
 
-import cv2
-import os
+
 cam = cv2.VideoCapture(0)
 cam.set(3, 640) # set video width
 cam.set(4, 480) # set video height
