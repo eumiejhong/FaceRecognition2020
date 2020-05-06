@@ -87,9 +87,7 @@ while not authorized_person:
         minNeighbors = 5,
         minSize = (int(minW), int(minH)),
    )
-
     cv2.putText(img, str(8 - (time.time() - not_auth_time)), (5, 45), font, 1, (255,255,255), 3)
-
     faces_found = 0
     for (x,y,w,h) in faces:
 
@@ -136,3 +134,4 @@ else:
 # print("\n [INFO] Exiting Program and cleanup stuff")
 cam.release()
 cv2.destroyAllWindows()
+
