@@ -9,7 +9,7 @@ import cv2
 import cv2
 
 # multiple cascades: https://github.com/Itseez/opencv/tree/master/data/haarcascades
-faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
+faceCascade = cv2.CascadeClassifier('./Cascades/haarcascade_frontalface_default.xml')
 
 cap = cv2.VideoCapture(0)
 cap.set(3,640) # set Width
