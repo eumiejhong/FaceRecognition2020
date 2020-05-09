@@ -97,7 +97,7 @@ while (True):
         id, confidence = recognizer.predict(gray[y:y+h,x:x+w])
 
         # Check if confidence is less them 100 ==> "0" is perfect match
-        if (confidence < 50):
+        if (confidence < 64):
             faces_found += 1
             
             seen_cnt[id] += 1
