@@ -97,8 +97,9 @@ while (True):
         id, confidence = recognizer.predict(gray[y:y+h,x:x+w])
 
         # Check if confidence is less them 100 ==> "0" is perfect match
-        if (confidence < 100):
+        if (confidence < 50):
             faces_found += 1
+            
             seen_cnt[id] += 1
             
             # done if we've seen any one face more than 40 times
@@ -115,7 +116,7 @@ while (True):
             confidence = "  {0}%".format(round(100 - confidence))
 
         cv2.putText(img, str(id), (x+5,y-5), font, 1, (255,255,255), 1)
-        cv2.putText(img, str(confidence), (x+5,y+h-5), font, 1, (255,255,0), 1)
+        #cv2.putText(img, str(confidence), (x+5,y+h-5), font, 1, (255,255,0), 1)
 
     cv2.imshow('camera',img)
 
